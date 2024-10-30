@@ -181,7 +181,7 @@
                 const response = await fetch('https://open-api.thenational.academy/api/v0/key-stages', {
                     method: 'GET',
                     headers: {
-                        'Authorization': `136a1135-7c62-43c9-9162-a124a1b2f81b 136a1135-7c62-43c9-9162-a124a1b2f81b`,
+                        'Authorization': `Bearer 136a1135-7c62-43c9-9162-a124a1b2f81b`,
                         'Content-Type': 'application/json'
                     }
                 });
@@ -211,10 +211,10 @@
             subjectDropdown.innerHTML = '<option>Loading...</option>';
 
             try {
-                const response = await fetch('http://open-api.thenational.academy/api/v0/subjects', {
+                const response = await fetch('https://open-api.thenational.academy/api/v0/subjects', {
                     method: 'GET',
                     headers: {
-                        'Authorization': `136a1135-7c62-43c9-9162-a124a1b2f81b 136a1135-7c62-43c9-9162-a124a1b2f81b`,
+                        'Authorization': `Bearer 136a1135-7c62-43c9-9162-a124a1b2f81b`,
                         'Content-Type': 'application/json'
                     }
                 });
@@ -246,10 +246,10 @@
             unitDropdown.innerHTML = '<option>Loading units...</option>';
 
             try {
-                const response = await fetch(`http://open-api.thenational.academy/api/v0/key-stages/${keyStage}/subject/${subject}/units`, {
+                const response = await fetch(`https://open-api.thenational.academy/api/v0/key-stages/${keyStage}/subject/${subject}/units`, {
                     method: 'GET',
                     headers: {
-                        'Authorization': `136a1135-7c62-43c9-9162-a124a1b2f81b 136a1135-7c62-43c9-9162-a124a1b2f81b`,
+                        'Authorization': `Bearer 136a1135-7c62-43c9-9162-a124a1b2f81b`,
                         'Content-Type': 'application/json'
                     }
                 });
@@ -282,10 +282,10 @@
             lessonDropdown.innerHTML = '<option>Loading lessons...</option>';
 
             try {
-                const response = await fetch(`http://open-api.thenational.academy/api/v0/key-stages/${keyStage}/subject/${subject}/lessons?unit=${unit}&offset=0&limit=10`, {
+                const response = await fetch(`https://open-api.thenational.academy/api/v0/key-stages/${keyStage}/subject/${subject}/lessons?unit=${unit}&offset=0&limit=10`, {
                     method: 'GET',
                     headers: {
-                        'Authorization': `136a1135-7c62-43c9-9162-a124a1b2f81b 136a1135-7c62-43c9-9162-a124a1b2f81b`,
+                        'Authorization': `Bearer 136a1135-7c62-43c9-9162-a124a1b2f81b`,
                         'Content-Type': 'application/json'
                     }
                 });
@@ -337,7 +337,7 @@ async function fetchAssets() {
         const response = await fetch(`https://open-api.thenational.academy/api/v0/lessons/${lesson}/assets`, {
             method: 'GET',
             headers: {
-                'Authorization': `136a1135-7c62-43c9-9162-a124a1b2f81b 136a1135-7c62-43c9-9162-a124a1b2f81b`,
+                'Authorization': `Bearer 136a1135-7c62-43c9-9162-a124a1b2f81b`,
                 'Content-Type': 'application/json'
             }
         });
